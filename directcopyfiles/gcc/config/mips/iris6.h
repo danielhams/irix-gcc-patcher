@@ -225,12 +225,15 @@ extern int long_intmax;
     {						\
       if (long_intmax == -1)			\
 	long_intmax = mips_abi == ABI_64;	\
-      if (!global_options_set.x_dwarf_strict)	\
-      dwarf_strict = 1;			\
-      if (!global_options_set.x_dwarf_version)	\
-      dwarf_version = 2;			\
     }						\
   while (0)
+
+/*
+      if (!global_options_set.x_dwarf_strict)	\
+	dwarf_strict = 1;			\
+      if (!global_options_set.x_dwarf_version)	\
+	dwarf_version = 2;			\
+*/
 
 extern void irix6_c_common_override_options (void);
 #define C_COMMON_OVERRIDE_OPTIONS irix6_c_common_override_options()
