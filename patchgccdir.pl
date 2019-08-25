@@ -80,7 +80,7 @@ for my $fullrelfile (@$files)
     push( @$filestubs, $filestub );
 }
 
-# Loop copying over direct copy files
+# Loop notifying that files require manual edits / diffs
 for my $filestub (@$filestubs)
 {
     my $dest_fn = $dest_dir . "/" . $filestub;
